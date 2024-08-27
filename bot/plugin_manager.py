@@ -16,6 +16,7 @@ from plugins.worldtimeapi import WorldTimeApiPlugin
 from plugins.whois_ import WhoisPlugin
 from plugins.webshot import WebshotPlugin
 from plugins.iplocation import IpLocationPlugin
+from plugins.olyn_collector import OlynCollector
 
 
 class PluginManager:
@@ -42,6 +43,7 @@ class PluginManager:
             'whois': WhoisPlugin,
             'webshot': WebshotPlugin,
             'iplocation': IpLocationPlugin,
+            'olyn_collector': OlynCollector
         }
         self.plugins = [plugin_mapping[plugin]() for plugin in enabled_plugins if plugin in plugin_mapping]
 
