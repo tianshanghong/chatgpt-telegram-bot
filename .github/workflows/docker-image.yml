@@ -15,6 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build and push Docker images
+      uses: docker/build-push-action@v6.7.0
       with:
         context: .
         push: true
