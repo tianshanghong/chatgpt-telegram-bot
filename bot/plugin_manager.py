@@ -17,6 +17,7 @@ from plugins.whois_ import WhoisPlugin
 from plugins.webshot import WebshotPlugin
 from plugins.iplocation import IpLocationPlugin
 from plugins.olyn_collector import OlynCollector
+from plugins.xiaohongshu import XiaohongshuPlugin
 
 
 class PluginManager:
@@ -43,7 +44,8 @@ class PluginManager:
             'whois': WhoisPlugin,
             'webshot': WebshotPlugin,
             'iplocation': IpLocationPlugin,
-            'olyn_collector': OlynCollector
+            'olyn_collector': OlynCollector,
+            'xiaohongshu': XiaohongshuPlugin
         }
         self.plugins = [plugin_mapping[plugin]() for plugin in enabled_plugins if plugin in plugin_mapping]
 
